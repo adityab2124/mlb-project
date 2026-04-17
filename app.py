@@ -483,8 +483,9 @@ with tab4:
                                  text=[f"{v:.4f}" for v in aucs], textposition='outside',
                                  textfont=dict(family='IBM Plex Mono', size=10)))
         fig3.add_hline(y=metrics['Sportsbook']['auc'], line_dash='dash', line_color='#555')
-        fig3.update_layout(title='AUC Comparison', yaxis=dict(range=[0.55, 0.65]),
-                            **PLOT_LAYOUT, height=320)
+        layout3 = {**PLOT_LAYOUT, 'height': 320}
+        layout3['yaxis'] = {**layout3.get('yaxis', {}), 'range': [0.55, 0.65]}
+        fig3.update_layout(title='AUC Comparison', **layout3)
         st.plotly_chart(fig3, use_container_width=True)
 
     with col_b:
