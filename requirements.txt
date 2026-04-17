@@ -1,0 +1,7 @@
+streamlit
+plotly
+scikit-learn
+xgboost
+catboost
+pandas
+numpy
