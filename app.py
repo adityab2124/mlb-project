@@ -528,10 +528,14 @@ with tab5:
             textfont=dict(family='IBM Plex Mono', size=11)
         ))
         fig6.add_hline(y=0.5, line_dash='dash', line_color='#555')
+        layout6 = dict(paper_bgcolor='#0d0d0d', plot_bgcolor='#111111',
+                        font=dict(family='IBM Plex Mono', color='#aaa', size=11),
+                        xaxis=dict(gridcolor='#1e1e1e', linecolor='#333'),
+                        yaxis=dict(gridcolor='#1e1e1e', linecolor='#333', range=[0, 0.7]),
+                        margin=dict(l=40, r=20, t=40, b=40))
         fig6.update_layout(title='Actual Win Rate by Gap Quintile',
-                            yaxis=dict(range=[0, 0.7]),
                             xaxis_title='Gap Quintile', yaxis_title='Home Win Rate',
-                            **PLOT_LAYOUT, height=350)
+                            height=350, **layout6)
         st.plotly_chart(fig6, use_container_width=True)
 
     st.caption("Gap = Model Probability − Sportsbook Implied Probability. Q5 = games where model strongly favors home team relative to sportsbook.")
