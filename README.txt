@@ -59,9 +59,7 @@ Use the sidebar to:
   - Adjust the betting gap threshold for the backtest simulation
 
 
-DEMO VIDEO (Optional)
----------------------
 A live version of the dashboard is deployed at:
-      https://[your-streamlit-cloud-url].streamlit.app
+      https://mlb-project-hdem9fkntmevjxjngx7qxy.streamlit.app/
 
 ================================================================================
